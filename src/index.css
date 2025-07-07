@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Orbitron:wght@400;700;900&display=swap');
+
+:root {
+  /* Mario Colors */
+  --mario-red: #FF6B6B;
+  --mario-blue: #4ECDC4;
+  --mario-yellow: #FFE66D;
+  --mario-green: #95E1D3;
+  --mario-purple: #A8E6CF;
+  --mario-orange: #FFB347;
+  
+  /* Web3 Gradients */
+  --web3-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --nft-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --crypto-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  --gold-gradient: linear-gradient(135deg, #ffd700 0%, #ffb347 100%);
+  
+  /* Dark theme */
+  --bg-dark: #1a1a2e;
+  --bg-darker: #16213e;
+  --text-light: #ffffff;
+  --text-accent: #00f2fe;
+  
+  /* Pixel sizes */
+  --pixel-1: 1px;
+  --pixel-2: 2px;
+  --pixel-4: 4px;
+  --pixel-8: 8px;
+  --pixel-16: 16px;
+  --pixel-32: 32px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Orbitron', monospace;
+  background: var(--bg-dark);
+  color: var(--text-light);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+.pixel-font {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.web3-gradient {
+  background: var(--web3-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.nft-gradient {
+  background: var(--nft-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.crypto-gradient {
+  background: var(--crypto-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gold-gradient {
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Pixel Art Button Styles */
+.pixel-button {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 12px;
+  padding: 16px 32px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  
+  /* Pixel art border effect */
+  box-shadow: 
+    0 0 0 2px #000,
+    0 0 0 4px currentColor,
+    0 4px 0 4px #000,
+    0 4px 0 6px currentColor;
+}
+
+.pixel-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 0 0 2px #000,
+    0 0 0 4px currentColor,
+    0 6px 0 4px #000,
+    0 6px 0 6px currentColor;
+}
+
+.pixel-button:active {
+  transform: translateY(2px);
+  box-shadow: 
+    0 0 0 2px #000,
+    0 0 0 4px currentColor,
+    0 2px 0 4px #000,
+    0 2px 0 6px currentColor;
+}
+
+.pixel-button.primary {
+  background: var(--mario-red);
+  color: white;
+}
+
+.pixel-button.secondary {
+  background: var(--mario-blue);
+  color: white;
+}
+
+.pixel-button.accent {
+  background: var(--mario-yellow);
+  color: #000;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+@keyframes slideInLeft {
+  from { transform: translateX(-100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInUp {
+  from { transform: translateY(100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-bounce {
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.animate-spin {
+  animation: spin 4s linear infinite;
+}
+
+.animate-pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* Pixel art cloud shapes */
+.pixel-cloud {
+  position: relative;
+  background: white;
+  border-radius: 0;
+  
+  /* Create pixel cloud shape with box-shadow */
+  box-shadow:
+    0 0 0 2px white,
+    -8px -8px 0 0 white,
+    8px -8px 0 0 white,
+    -16px 0 0 0 white,
+    16px 0 0 0 white,
+    -8px 8px 0 0 white,
+    8px 8px 0 0 white;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-darker);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--mario-red);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--mario-blue);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .pixel-font {
+    font-size: 10px;
+  }
+  
+  .pixel-button {
+    font-size: 10px;
+    padding: 12px 24px;
+  }
+}
+
+/* Demo Banner Styles */
+.demo-banner {
+  position: fixed;
+  top: 20%;
+  left: 20px;
+  z-index: 1000;
+  pointer-events: auto;
+}
+
+.demo-banner-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 69, 0, 0.95);
+  backdrop-filter: blur(10px);
+  border: 3px solid var(--mario-yellow);
+  border-radius: 12px;
+  padding: 12px 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  min-width: 280px;
+  animation: pulse-glow 2s ease-in-out infinite alternate;
+}
+
+.demo-icon {
+  color: var(--mario-yellow);
+  animation: bounce 1s ease-in-out infinite alternate;
+}
+
+.demo-text h4 {
+  color: var(--mario-yellow);
+  margin: 0;
+  font-size: 12px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.demo-text p {
+  color: white;
+  margin: 4px 0 0 0;
+  font-size: 11px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.demo-close {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  opacity: 0.7;
+}
+
+.demo-close:hover {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+@keyframes pulse-glow {
+  0% {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 0 0 rgba(255, 215, 0, 0.4);
+  }
+  100% {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 0 8px rgba(255, 215, 0, 0.1);
+  }
+}
+
+/* Custom cursor for game feel */
+body {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><rect width="20" height="20" fill="white" stroke="black" stroke-width="1"/><rect x="2" y="2" width="16" height="16" fill="none" stroke="black" stroke-width="1"/></svg>'), auto;
+}
