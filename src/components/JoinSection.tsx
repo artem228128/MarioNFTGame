@@ -93,7 +93,7 @@ const JoinSection: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="social-buttons"
           >
-            {socialLinks.map((social, index) => (
+            {socialLinks.map((social) => (
               <motion.a
                 key={social.name}
                 href={social.url}

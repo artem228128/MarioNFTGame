@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Gamepad2, Coins, Zap } from 'lucide-react';
+import { Gamepad2, Coins } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 

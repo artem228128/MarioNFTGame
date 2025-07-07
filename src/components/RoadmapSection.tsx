@@ -16,7 +16,6 @@ const RoadmapSection: React.FC = () => {
     if (isInView && characterRef.current && pathRef.current && sectionRef.current) {
       // Character moving along the roadmap path
       const path = pathRef.current;
-      const pathLength = path.getTotalLength();
       
       gsap.set(characterRef.current, {
         motionPath: {
